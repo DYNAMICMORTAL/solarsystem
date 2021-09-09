@@ -1,0 +1,398 @@
+:root{
+    --dark-color: rgb(0,0,0);
+    --glossy-red: #9a02ff;
+    --hidden-red: rgba(238, 17, 17, 0);
+    --light-red: rgba(76, 17, 238, 0.5);
+    --paths-theme: var(--very-light-red) var(--glossy-red);
+    --planets-theme: var(--light-red) var(--light-red) var(--light-red) var(--glossy-red); 
+    --very-light-red: rgb(174, 0, 255);
+}
+*{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+body
+{
+    overflow: hidden;
+    background-color: var(--dark-color);
+}
+body #solar-system
+{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: skewX(-45deg);
+       -moz-transform: skewX(-45deg);
+        -ms-transform: skewX(-45deg);
+         -o-transform: skewX(-45deg);
+            transform: skewX(-45deg);
+    -webkit-transform-origin: center;
+       -moz-transform-origin: center;
+        -ms-transform-origin: center;
+         -o-transform-origin: center;
+            transform-origin: center;
+    justify-content: center;
+    align-items: center;
+}
+section #sun
+{
+    position: fixed;
+    z-index: 100;  
+    width: 174.085px; 
+    height: 174.085px;
+    -webkit-transform: skewX(45deg);
+       -moz-transform: skewX(45deg);
+-ms-transform: skewX(45deg);
+    -o-transform: skewX(45deg);
+    transform: skewX(45deg);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--glossy-red);
+    background: linear-gradient(135deg, var(--glossy-red) 20%, var(--hidden-red) 100%);
+    -webkit-background: linear-gradient(135deg, var(--glossy-red) 20%, var(--hidden-red) 100%);
+    -moz-background: linear-gradient(135deg, var(--glossy-red) 20%, var(--hidden-red) 100%);
+    -o-background: linear-gradient(135deg, var(--glossy-red) 20%, var(--hidden-red) 100%);
+    -ms-background: linear-gradient(135deg, var(--glossy-red) 20%, var(--hidden-red) 100%);
+    filter: drop-shadow(0 0 2rem var(--glossy-red)) blur(1px);
+    -webkit-filter: drop-shadow(0 0 2rem var(--glossy-red)) blur(1px);
+    -moz-filter: drop-shadow(0 0 2rem var(--glossy-red)) blur(1px);
+    -o--ms-filter: drop-shadow(0 0 2rem var(--glossy-red)) blur(1px);
+}
+article #mercury{
+    position: fixed;
+    z-index: 99;
+    top: 38px;
+    display: flex;
+    width: 24.397px;
+    height: 24.397px;
+    -webkit-animation: planets-rotation 29.3225s linear infinite;
+-moz-animation: planets-rotation 29.3225s linear infinite;
+-ms-animation: planets-rotation 29.3225s linear infinite;
+    -o-animation: planets-rotation 29.3225s linear infinite;
+    animation: planets-rotation 29.3225s linear infinite;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--planets-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--hidden-red);
+
+    justify-content: center;
+    align-items: center;
+}
+article #venus{
+    position: fixed;
+    z-index: 99;
+    top: 15px;
+    display: flex;
+    width: 60.518px;
+    height: 60.518px;
+    -webkit-animation: planets-rotation 121.765s linear infinite;
+    -moz-animation: planets-rotation 121.765s linear infinite;
+    -ms-animation: planets-rotation 121.765s linear infinite;
+    -o-animation: planets-rotation 121.765s linear infinite;
+    animation: planets-rotation 121.765s linear infinite;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--planets-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--hidden-red);
+    justify-content: center;
+    align-items: center;
+}
+article #earth{
+    position: fixed;
+    z-index: 99;
+    top: 35px;
+    display: flex;
+    width: 63.71px; 
+    height: 63.71px;
+    -webkit-animation: planets-rotation .4874s linear infinite;
+    -moz-animation: planets-rotation .4874s linear infinite;
+-ms-animation: planets-rotation .4874s linear infinite;
+    -o-animation: planets-rotation .4874s linear infinite;
+    animation: planets-rotation .4874s linear infinite;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--planets-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--hidden-red);
+    justify-content: center;
+    align-items: center;
+}
+article #earth::after
+{
+    position: inherit;
+    width: 40%;
+    height: 40%;
+    content: '';
+    -webkit-animation: earth-blinking 2s linear infinite;
+    -moz-animation: earth-blinking 2s linear infinite;
+    -ms-animation: earth-blinking 2s linear infinite;
+    -o-animation: earth-blinking 2s linear infinite;
+    animation: earth-blinking 2s linear infinite;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+    background: var(--glossy-red);
+    -webkit-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    -moz-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    -o-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    -ms-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+}
+article #mars
+{
+    position: fixed;
+    z-index: 99;
+    top: 288px;
+    display: flex;
+    width: 33.895px;
+    height: 33.895px;
+    -webkit-animation: planets-rotation .5128s linear infinite;
+    -moz-animation: planets-rotation .5128s linear infinite;
+    -ms-animation: planets-rotation .5128s linear infinite;
+    -o-animation: planets-rotation .5128s linear infinite;
+    animation: planets-rotation .5128s linear infinite;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--planets-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--hidden-red);
+    justify-content: center;
+    align-items: center;
+}
+article #mars::after,
+article #venus::after,
+article #mercury::after{
+    width: 40%;
+    height: 40%;
+    content: '';
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+    background: var(--glossy-red);
+    -webkit-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    -moz-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    -o-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    -ms-filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+}
+section #mercury-trajectory{
+    position: fixed;
+    z-index: 98;
+    width: 203.085px;
+    height: 203.085px;
+    -webkit-animation: solar-revolution 43.9845s linear infinite;
+    -moz-animation: solar-revolution 43.9845s linear infinite;
+    -ms-animation: solar-revolution 43.9845s linear infinite;
+    -o-animation: solar-revolution 43.9845s linear infinite;
+    animation: solar-revolution 43.9845s linear infinite;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--paths-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+section #venus-trajectory{
+    position: fixed;
+    z-index: 98;
+    width: 257.085px;
+    height: 257.085px;
+    -webkit-animation: solar-revolution 112.3335s linear infinite;
+    -moz-animation: solar-revolution 112.3335s linear infinite;
+    -ms-animation: solar-revolution 112.3335s linear infinite;
+    -o-animation: solar-revolution 112.3335s linear infinite;
+    animation: solar-revolution 112.3335s linear infinite;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--paths-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+section #earth-trajectory{
+    position: fixed;
+    z-index: 98;
+    width: 332.085px;
+    height: 332.085px;
+    -webkit-animation: solar-revolution 182.6211s linear infinite;
+    -moz-animation: solar-revolution 182.6211s linear infinite;
+    -ms-animation: solar-revolution 182.6211s linear infinite;
+    -o-animation: solar-revolution 182.6211s linear infinite;
+    animation: solar-revolution 182.6211s linear infinite;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--paths-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+section #mars-trajectory{
+    position: fixed;
+    z-index: 98;
+    width: 446.085px;
+    height: 446.085px;
+    -webkit-animation: solar-revolution 343.4425s linear infinite;
+    -moz-animation: solar-revolution 343.4425s linear infinite;
+    -ms-animation: solar-revolution 343.4425s linear infinite;
+    -o-animation: solar-revolution 343.4425s linear infinite;
+    animation: solar-revolution 343.4425s linear infinite;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--paths-theme);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+@keyframes solar-revolution{
+    to
+    {
+        transform: rotate(360deg) ;
+    }
+}
+
+@keyframes planets-rotation{
+    to
+    {
+        transform: rotate(360deg) ;
+    }
+}
+@keyframes earth-blinking{
+    from
+    {
+        background-color: var(--glossy-red);
+
+        filter: drop-shadow(0 0 .3rem var(--light-red)) blur(.5px);
+    }
+    to
+    {
+        background-color: var(--dark-color);
+
+        filter: drop-shadow(0 0 0 var(--light-red)) blur(0);
+    }
+}
+@media only screen and (max-width: 768px){
+    section #sun
+    {
+        width: 87.0425px;
+        height: 87.0425px;
+    }
+    section #mercury-trajectory
+    {
+        width: 101.5425px;
+        height: 101.5425px;
+    }
+    article #mercury
+    {
+        top: 17px;
+
+        width: 12.1985px;
+        height: 12.1985px;
+    }
+    section #venus-trajectory
+    {
+        width: 128.5425px;
+        height: 128.5425px;
+    }
+    article #venus
+    {
+        top: 6px;
+
+        width: 30.259px;
+        height: 30.259px;
+    }
+    section #earth-trajectory
+    {
+        width: 166.0425px;
+        height: 166.0425px;
+    }
+    article #earth
+    {
+        top: 16px;
+
+        width: 31.855px;
+        height: 31.855px;
+    }
+    section #mars-trajectory
+    {
+        width: 223.0425px;
+        height: 223.0425px;
+    }
+    article #mars
+    {
+        top: 56px;
+
+        width: 16.9475px;
+        height: 16.9475px;
+    }
+}
+@media only screen and (min-width: 1921px)
+{
+    section #sun
+    {
+        width: 348.17px;
+        height: 348.17px;
+    }
+    section #mercury-trajectory
+    {
+        width: 406.17px;
+        height: 406.17px;
+    }
+    article #mercury
+    {
+        top: 82px;
+
+        width: 48.794px; 
+        height: 48.794px;
+    }
+    section #venus-trajectory
+    {
+        width: 514.17px;
+        height: 514.17px;
+    }
+    article #venus
+    {
+        top: 28px;
+
+        width: 121.036px; 
+        height: 121.036px;
+    }
+    section #earth-trajectory
+    {
+        width: 664.17px;
+        height: 664.17px;
+    }
+    article #earth
+    {
+        top: 68px;
+
+        width: 127.42px;
+        height: 127.42px;
+    }
+    section #mars-trajectory
+    {
+        width: 892.14px;
+        height: 892.14px;
+    }
+    article #mars
+    {
+        top: 242px;
+
+        width: 67.79px;
+        height: 67.79px;
+    }
+}
